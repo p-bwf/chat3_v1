@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: UNLICENSED
 
 // File: contracts/Context.sol
 
@@ -198,7 +198,7 @@ contract Chat3_V1 is Ownable {
         uint256 sum1 = supply == 0 ? 0 : (supply - 1 )* (supply) * (2 * (supply - 1) + 1) / 6;
         uint256 sum2 = supply == 0 && amount == 1 ? 0 : (supply - 1 + amount) * (supply + amount) * (2 * (supply - 1 + amount) + 1) / 6;
         uint256 summation = sum2 - sum1;
-        return summation * 1 ether / 16000;
+        return summation * 1 ether / 3;
     }
 
     function getBuyPrice(address sharesSubject, uint256 amount) public view returns (uint256) {
